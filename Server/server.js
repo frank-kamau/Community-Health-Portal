@@ -9,6 +9,7 @@ import symptomRoutes from "./routes/symptomRoutes.js";
 import articleRoutes from "./routes/articleRoutes.js";
 import facilityRoutes from "./routes/facilityRoutes.js";
 import analyticsRoutes from "./routes/analyticsRoutes.js";
+import adminSetupRoute from "./routes/adminSetup.js";
 import { errorHandler } from "./middleware/errorMiddleware.js";
 
 dotenv.config();
@@ -27,6 +28,7 @@ app.use("/api/symptoms", symptomRoutes);
 app.use("/api/articles", articleRoutes);
 app.use("/api/facilities", facilityRoutes);
 app.use("/api/analytics", analyticsRoutes);
+app.use("/api/setup", adminSetupRoute);
 
 // Error Handler
 app.use(errorHandler);
